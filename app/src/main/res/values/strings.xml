@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DigiCare</string>
+    <string name="save">Save</string>
+    <string name="generate">Generate</string>
+    <string name="enter_text">Enter Text</string>
+    <string name="value_required">Value Required</string>
+    <string name="textview">TextView</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="tab_text_1">Examine</string>
+    <string name="tab_text_2">Patient Record</string>
+    <string name="title_activity_examine">Examine</string>
+    <string name="activepatdoc">#43cea2</string>
+    <string name="defaultpatdoc">#948E99</string>
+</resources>

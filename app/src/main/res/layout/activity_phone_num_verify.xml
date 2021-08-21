@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    tools:context=".doctor.phoneNumVerify">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/verifyimg"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:src="@drawable/phoneverfication" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify Your Number"
+            android:textSize="23dp"
+            android:textColor="#37474f"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Please enter your mobile number to receive a verfication code."
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="#666666"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/countrycode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91"
+                android:textSize="23dp"
+                android:textColor="#37474f"/>
+
+            <EditText
+                android:id="@+id/phoneNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="23dp"
+                android:textColor="#263238"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="9791*** ***"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold">
+                <requestFocus/>
+            </EditText>
+        </LinearLayout>
+        <Button
+            android:id="@+id/continueBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="CONTINUE"
+            android:textColor="#ffff"/>
+
+        <Button
+            android:id="@+id/later"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#37474f"
+            android:text="NO, OTHER TIME"/>
+    </LinearLayout>
+</RelativeLayout>

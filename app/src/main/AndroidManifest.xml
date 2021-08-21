@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.digicare">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Digicare">
+        <activity
+            android:name=".patients.LoginPatients"
+            android:parentActivityName=".doctor.LoginRegister"/>
+        <activity
+            android:name=".patients.BloodPressure"
+            android:parentActivityName=".patients.PersonalAnalysis"/>
+        <activity
+            android:name=".patients.BloodSugar"
+            android:parentActivityName=".patients.PersonalAnalysis"/>
+        <activity
+            android:name=".patients.ManageOTP"
+            android:parentActivityName=".patients.LoginPatients"/>
+        <activity
+            android:name=".patients.TreatmentsLog"
+            android:parentActivityName=".patients.DoctorPatients"/>
+        <activity
+            android:name=".patients.DoctorPatients"
+            android:parentActivityName=".patients.ManageOTP"/>
+        <activity android:name=".patients.RegisterActivity"/>
+        <activity android:name=".patients.RegisterHealth"/>
+        <activity
+            android:name=".patients.OxygenLevel"
+            android:parentActivityName=".patients.PersonalAnalysis"/>
+        <activity
+            android:name=".patients.PersonalAnalysis"
+            android:parentActivityName=".patients.DoctorPatients"/>
+        <activity
+            android:name=".doctor.phoneNumVerify"
+            android:parentActivityName=".doctor.register" />
+        <activity
+            android:name=".doctor.register"
+            android:parentActivityName=".doctor.LoginRegister" />
+        <activity
+            android:name=".doctor.login"
+            android:parentActivityName=".doctor.LoginRegister" />
+        <activity android:name=".doctor.LoginRegister" />
+        <activity
+            android:name=".doctor.Examine"
+            android:parentActivityName=".doctor.GenerateDetails" />
+        <activity
+            android:name=".doctor.GenerateDetails"
+            android:parentActivityName=".doctor.ScannerQr" />
+        <activity
+            android:name=".doctor.ScannerQr"
+            android:parentActivityName=".doctor.LoginRegister" />
+        <activity android:name=".doctor.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

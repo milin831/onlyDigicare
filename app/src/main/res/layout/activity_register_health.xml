@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1F75FE">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="10dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="30dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/banner2"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/regMedicalHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/logo"
+                android:textColor="@color/gray"
+                android:text="Medical Information"
+                android:gravity="center" />
+            <View
+                android:id="@+id/regHR"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/gray"
+                android:layout_below="@id/regMedicalHeading"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp" />
+
+            <LinearLayout
+                android:id="@+id/regHeight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/regHR"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:text="Height"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/tvUserHeight"
+                    android:inputType="number"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Height in Centimeter"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textColorHint="#a0a0a0"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/regWeight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/regHeight"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:text="Weight"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/tvUserWeight"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="14dp"
+                    android:hint="Enter Weight in Kg"
+                    android:textColor="@color/black"
+                    android:textColorHint="#a0a0a0"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/regBloodGroup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/regWeight"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:text="Blood Group"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/tvUserBloodGroup"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="14dp"
+                    android:hint="Enter Blood Group"
+                    android:textColor="@color/black"
+                    android:textColorHint="#a0a0a0"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/regAllergies"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/regBloodGroup"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:text="Allergies"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/tvUserAllergies"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="14dp"
+                    android:hint="Enter Allergies(If Any)"
+                    android:textColor="@color/black"
+                    android:textColorHint="#a0a0a0"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/regFinishBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regAllergies"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="120dp"
+                android:text="Finish"
+                android:textSize="14dp"
+                android:background="#1F75FE" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

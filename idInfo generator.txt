@@ -1,0 +1,42 @@
+import java.util.regex.Pattern;
+import java.util.HashMap;
+
+public class Main {
+  public static void main(String[] args) {
+    String sentence="<QPDB n=\"Milin Marathe\" u=\"xxxxxxxx5808\" g=\"M\" m=\"xxxxxx1310\" d=\"08-03-2001\" a=\"42 shivlok-5 BDA road,near deep nagar awadhpuri bhopal,Huzur,Bhopal,Madhya Pradesh,462022\" i=\"AAAADGpQICANCocKAAAAFGZ0eXBqcDIgAAAAAGpwMiAAAAAtanAyaAAAABZpaGRyAAAAyAAAAKAAAwcHAAAAAAAPY29scgEAAAAAABAAAAGZanAyY/9P/1EALwAAAAAAoAAAAMgAAAAAAAAAAAAAAKAAAADIAAAAAAAAAAAAAwcBAQcBAQcBAf9SAAwAAAABAQUEBAAA/1wAI0JvGG7qbupuvGcAZwBm4l9MX0xfZEgDSANIRU/ST9JPYf9kACIAAUNyZWF0ZWQgYnk6IEpKMjAwMCB2ZXJzaW9uIDQuMf+QAAoAAAAAAQUAAf9SAAwAAAABAQUEBAAA/5PH0GQVLho+5mEbQyHfArK3/aYjAPy6HdSBqNtrwfEOHYaMvQL/FsTk3iKiuBTB8Q4e1Qdf4hvkye17dnaYssPlKQfCZA6MGKiDafb5xXG08UpE4fCo6oNwGnEc/g4aCRpoiF6IRwEgOoL5i2vAcLARgCkXjel6HYzcgMPhah8ZqDo4TmaSHEoe+35F3a2iLaLsa4eGHw3iOadnBHoqiVUimu4uZ1TQUXltj0myGcmdAjRmx5aQOCDyk8j2gE+AgMOow6YAmVjrf2yzjY074JagwvHuuGDBbHCUAvyryGZOBxCAgICAgICAgP/Z\" x=\"\" s=\"kZyvHGkTP89IWfr96UZmYFEJ0K9exHv05R0ip8zxuaa8iCXApSczvzlChYZhnC+eYt5GuqhVyfCcSjufO71Vmy4Opybx7GPY8kw92yzdNVU1MbRDXL0jr2IET45S9IWnd5Wr+jQUVpkL0BOu54zorCWscGiok9FIb0pBlUXq8M+bw/4CSp5g27df1xU6UPGEkA05tgvDT/ydG+Ov5ec4LyYEVifcr3uv9HOjt4PApB7HUyIhifIKpUvUQ4fcLa5e9Q3CumCCcRCtQWJJ/nzZOqqmJMuM72WPyA+qU5Gy55djksG0QEgRGoF3qa1RReaEOSRfci+RZWCjgOy2Sn4TLg==\"/>";
+        
+        Pattern ptn=Pattern.compile("(\"|<QPDB |/>)");
+        String[] arr1=ptn.split(sentence);
+        for(int i=0;i<arr1.length;i++){
+            arr1[i]=arr1[i].replace("\"","");
+            arr1[i]=arr1[i].replace("=",":");
+            arr1[i]=arr1[i].replace(" n:","n:");
+            arr1[i]=arr1[i].replace(" u:","u:"); 
+            arr1[i]=arr1[i].replace(" g:","g:");
+            arr1[i]=arr1[i].replace(" m:","m:"); 
+            arr1[i]=arr1[i].replace(" d:","d:");
+            arr1[i]=arr1[i].replace(" a:","a:"); 
+            arr1[i]=arr1[i].replace(" i:","i:"); 
+            arr1[i]=arr1[i].replace(" x:","x:"); 
+            arr1[i]=arr1[i].replace(" s:","s:");
+            arr1[i]=arr1[i].replace(":"," ");
+            System.out.println(arr1[i]);
+        }
+        
+        StringBuffer sb = new StringBuffer();
+        for(int i = 0; i < arr1.length; i++) {
+            sb.append(arr1[i]+"::");
+        }
+        Pattern ptn2=Pattern.compile("::");
+        String str = sb.toString();
+        String[] parts = ptn2.split(str);
+        
+        HashMap<String, String> idInfo = new HashMap<String, String>();
+        
+        for(int i=1;i<parts.length;i=i+2){
+        idInfo.put(parts[i], parts[i + 1]);
+        }
+        System.out.println(idInfo);
+        System.out.println(idInfo.get("d "));
+  }
+}

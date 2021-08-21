@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".doctor.GenerateDetails">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabHost
+            android:id="@+id/tabHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+<!--                    tab1-->
+                    <LinearLayout
+                        android:id="@+id/Examine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/back5">
+
+
+                        <ImageView
+                            android:id="@+id/qrPlaceHolder"
+                            android:layout_width="300dp"
+                            android:layout_height="200dp"
+                            android:paddingTop="30dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:src="@drawable/qrimg"
+                            />
+
+                        <Button
+                            android:id="@+id/refresh"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Generate"
+                            android:background="@drawable/button"
+                            android:textSize="10dp"
+                            android:textColor="#fff"
+                            android:paddingRight="15dp"
+                            android:paddingLeft="15dp"
+                            android:shadowColor="#000"
+                            />
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp"
+
+                            android:background="#ffff"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="15dp"
+                                android:layout_weight="1"
+                                android:layout_margin="15dp">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp">
+
+                                    <TextView
+                                        android:id="@+id/PatientText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        android:layout_weight="1"
+                                        android:text="Patient"
+                                        android:textAlignment="center" />
+                                </TableRow>
+
+                                <TableLayout
+                                    android:id="@+id/tabledetial"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="3dp">
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="2dp"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Name"
+                                            android:layout_weight="1"/>
+
+                                        <TextView
+                                            android:id="@+id/dash1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text=":-"
+                                            android:layout_weight="1"
+                                            android:maxLines="1"/>
+
+                                        <TextView
+                                            android:id="@+id/personname"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="name of the person"
+                                            android:layout_weight="3"
+                                            android:maxLines="3"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="2dp"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/DOB"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Data of birth"
+                                            android:layout_weight="1"/>
+
+                                        <TextView
+                                            android:id="@+id/dash2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text=":-"
+                                            android:layout_weight="1"
+                                            android:maxLines="1"/>
+
+                                        <TextView
+                                            android:id="@+id/dataofbirth"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="data of birth of the person"
+                                            android:layout_weight="3"
+                                            android:maxLines="3"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="2dp"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/Gender"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Gender"
+                                            android:layout_weight="1"/>
+
+                                        <TextView
+                                            android:id="@+id/dash3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text=":-"
+                                            android:layout_weight="1"
+                                            android:maxLines="1"/>
+
+                                        <TextView
+                                            android:id="@+id/gender"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Gender of the person"
+                                            android:layout_weight="3"
+                                            android:maxLines="3"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="2dp"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/MN"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Mobile Number"
+                                            android:layout_weight="1"/>
+
+                                        <TextView
+                                            android:id="@+id/dash4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text=":-"
+                                            android:layout_weight="1"
+                                            android:maxLines="1"/>
+
+                                        <TextView
+                                            android:id="@+id/mobile"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="mobile number of the person"
+                                            android:layout_weight="3"
+                                            android:maxLines="3"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="2dp"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/Age"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Age"
+                                            android:layout_weight="1"/>
+
+                                        <TextView
+                                            android:id="@+id/dash5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text=":-"
+                                            android:layout_weight="1"
+                                            android:maxLines="1"/>
+
+                                        <TextView
+                                            android:id="@+id/age"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="age of the person"
+                                            android:layout_weight="3"
+                                            android:maxLines="3"/>
+                                    </TableRow>
+                                </TableLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="2dp"
+                                    android:paddingBottom="2dp"
+                                    android:layout_weight="1">
+
+                                    <Button
+                                        android:id="@+id/examinebtn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:gravity="center"
+                                        android:background="@drawable/button"
+                                        android:textSize="13dp"
+                                        android:textColor="#fff"
+                                        android:paddingRight="40dp"
+                                        android:paddingLeft="40dp"
+                                        android:shadowColor="#000"
+                                        android:text="Examine"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </TableLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+<!--                    tab2-->
+                    <com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout
+                        android:id="@+id/patientRecord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/back5">
+
+                        <LinearLayout
+                            android:id="@+id/lay1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+0
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="10dp"
+                                android:background="#ffff"
+                                android:padding="10dp"
+                                android:layout_margin="20dp">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/namedetial"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:text="Name" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/agedetial"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:text="Age" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/diasesedetial"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:layout_weight="1"
+                                                android:text="Disaese" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/datedetial"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:text="Date" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                                <LinearLayout
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:orientation="vertical">
+
+                                                    <ImageView
+                                                        android:id="@+id/imageView1"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        app:srcCompat="@drawable/phone" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:orientation="vertical">
+
+                                                    <ImageView
+                                                        android:id="@+id/imageView2"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        app:srcCompat="@drawable/whatsapp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_weight="1"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:orientation="vertical">
+
+                                                    <ImageView
+                                                        android:id="@+id/imageView3"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        app:srcCompat="@drawable/chat" />
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+                    </com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
